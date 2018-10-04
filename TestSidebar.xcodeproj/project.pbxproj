@@ -113,8 +113,8 @@
 				8D4053A9215F3F8B00F1D10A /* Info.plist */,
 				8D4053AA215F3F8B00F1D10A /* TestSidebar.entitlements */,
 				8D4053CC215F421C00F1D10A /* RootViewController.swift */,
-				8D4053CE215F42E100F1D10A /* FirstViewController.swift */,
 				8D4053D0215F522600F1D10A /* MasterViewController.swift */,
+				8D4053CE215F42E100F1D10A /* FirstViewController.swift */,
 				8D24019A215F68510039E34E /* SecondViewController.swift */,
 				8D24019E215F688F0039E34E /* ThridViewController.swift */,
 			);

@@ -707,7 +707,7 @@
                 <splitViewController id="H52-a4-Kf6" customClass="RootViewController" customModule="TestSidebar" customModuleProvider="target" sceneMemberID="viewController">
                     <splitViewItems>
                         <splitViewItem canCollapse="YES" holdingPriority="260" behavior="sidebar" id="cra-bv-24q"/>
-                        <splitViewItem id="7zY-il-pLa"/>
+                        <splitViewItem holdingPriority="255" behavior="contentList" id="7zY-il-pLa"/>
                     </splitViewItems>
                     <splitView key="splitView" dividerStyle="thin" vertical="YES" id="IyE-u8-XEQ">
                         <rect key="frame" x="0.0" y="0.0" width="560" height="300"/>
@@ -859,7 +859,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="MyOutline" destination="WJR-f9-kGb" id="TaA-2y-Wcv"/>
+                        <outlet property="OutlineView" destination="WJR-f9-kGb" id="ffI-5c-12c"/>
                     </connections>
                 </viewController>
                 <customObject id="J33-ZL-r0o" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -874,13 +874,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="559" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6pN-zv-zO6">
-                                <rect key="frame" x="255" y="126" width="48" height="48"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UbW-A2-qEH">
+                                <rect key="frame" x="18" y="263" width="151" height="17"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Add more sources to list" id="iH9-ss-QjF">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aaD-Wu-VUp">
+                                <rect key="frame" x="20" y="233" width="519" height="22"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="hyD-4V-xFN">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wIc-qp-4Z8">
+                                <rect key="frame" x="464" y="197" width="81" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSAdvanced" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="gJ6-kU-RMB">
+                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="YX2-BP-dK1">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="onClickButton:" target="oKH-AI-CJv" id="ghc-Ie-Tph"/>
+                                </connections>
                             </button>
                         </subviews>
                     </view>
@@ -915,7 +936,6 @@
     </scenes>
     <resources>
         <image name="NSActionTemplate" width="14" height="14"/>
-        <image name="NSAdvanced" width="128" height="128"/>
         <image name="NSApplicationIcon" width="128" height="128"/>
         <image name="NSBonjour" width="128" height="128"/>
         <image name="NSTouchBarAudioOutputMuteTemplate" width="26" height="30"/>
